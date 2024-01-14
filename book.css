@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rampart One', cursive;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e0e4ee;
+    perspective: 1000px;
+}
+.book{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.book:hover .cover{
+    transform: rotateX(10deg) rotateY(-180deg);
+}
+.book:hover .page{
+    transform: rotateX(10deg) rotateY(-180deg);
+    z-index: 2;
+}
+
+
+
+.cover,
+.back_cover{
+    position: absolute;
+    height: 27rem;
+    width: 20rem;
+    background-color: #343755;
+    border-radius: 2px 20px 20px 2px;
+    box-shadow: 1px 1px 10px gray;
+    transform: rotateX(10deg);
+    transform-origin: center left;
+}
+.cover{
+    z-index: 1;
+    transition: all 3s;
+   
+  
+
+}
+.back_cover img,.cover img{
+    border-radius: 2px 20px 20px 2px;
+    height: 100%;
+    width: 99%;
+}
+.back_cover{
+    z-index: -2;
+}
+
+.page,
+.last-page{
+    height: 26rem;
+    width: 19.6rem;
+    position: absolute;
+    background-color: white;
+    border-radius: 2px 20px 20px 2px;
+    transform-origin: center left;
+    transform: rotateX(10deg);
+    z-index: -1;
+    
+}
+.page:nth-child(2){
+    transition-duration: 3s;
+}
+.page:nth-child(3){
+    transition-duration: 2.6s;
+}
+.page:nth-child(4){
+    transition-duration: 2.2s;
+}
+.page:nth-child(5){
+    transition-duration: 1.8s;
+    
+}
+.page:nth-child(6){
+    transition-duration: 1.4s;
+}
+.book:hover .page:nth-child(2){
+    transition-duration: 6s;
+    
+   
+}
+.book:hover .page:nth-child(3){
+    transition-duration: 5.6s;
+    
+   
+}
+.book:hover .page:nth-child(4){
+    transition-duration: 5.2s;
+    
+   
+}
+.book:hover .page:nth-child(5){
+    transition-duration: 4.8s;
+    
+   
+}
+.book:hover .page:nth-child(6){
+    transition-duration: 4.4s;
+    
+
+}
+.last-page h2{
+    text-align: center;
+    font-size: 1.2em ;
+}
+.o2{
+    background: url(images/second.png);
+   
+    background-repeat: no-repeat;
+
+}
+.o3{
+    background: url(images/o3.png);
+   
+}
+.o4{
+    background: url(images/o4.png);
+   
+}
+.o5{
+ background: url(images/o5.png);
+
+}
+.o6{
+    background: url(images/o6.png);
+   
+}
+
+.last-page img{
+    position: relative;
+    
+    height: 100%;
+    width: 100%;
+   
+    z-index: -1;
+}
+footer {
+    font-family: 'Rampart One', cursive;
+    font-size: 2rem;
+    margin-left: 4rem;
+    margin-top: 30rem;
+    text-align: center;
+}
